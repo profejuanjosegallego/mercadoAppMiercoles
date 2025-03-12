@@ -19,9 +19,8 @@ while opcion != 5:
     opcion=int(input("Digita una opcion del menu: "))
 
     if opcion == 1:
-        print("Creando la lista")
+        
         #Poblando listas y diccionarios en python 
-
         #Asignando claves a un diccionario
         producto["id"]=5
         producto["nombre"]=input("Digita el nombre del producto: ")
@@ -35,9 +34,28 @@ while opcion != 5:
 
 
     elif opcion == 2:
-        print("Mostrando la lista")
+        
+        #Recorrer una lista
+        for productoIterado in productos:
+            print(productoIterado["nombre "])
+            print(productoIterado["precio"])
+            
+
     elif opcion == 3:
-        print("Modificando la lista")
+        
+        #Preguntarle al Usuario cual producto desea modificar
+        idProductoABuscar=int(input("Cual es el id del producto que deseas modificar: "))
+        #Recorrer la lista para buscar el elemento que se desea modificar
+        for ProductoBuscado in productos :
+            if idProductoABuscar ==  ProductoBuscado["id"]:
+                print("Encontrado")
+                break
+            else:
+                print("No encontrado")
+        #Modificar las propiedades pedidas 
+        
+        #Investigar que hace el POP
+                
     elif opcion == 4:
         print("Retirando un producto")
     else:
